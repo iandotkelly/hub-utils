@@ -1,0 +1,24 @@
+{
+  "name": "dev-utils",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "commander": "^2.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-plugin-node": "^5.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ian Kelly",
+  "license": "UNLICENSED"
+}
