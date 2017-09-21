@@ -11,25 +11,27 @@ program
   .version(pjson.version)
 
 program
-  .command('create-devices [startrange] [endrange]')
+  .command('create-devices <startrange> <endrange> [idprefix]')
   .option('-p, --pretty', 'Pretty print json')
   .description('create device creation object for hub-management')
-  .action((rangeStart, rangeEnd, options) => {
+  .action((rangeStart, rangeEnd, idprefix, options) => {
     const result = bulk.create({
       rangeStart: Number(rangeStart),
-      rangeEnd: Number(rangeEnd)
+      rangeEnd: Number(rangeEnd),
+      prefix: idprefix
     });
     console.log(options.pretty ? JSON.stringify(result, null, '  ') : JSON.stringify(result))
   })
 
   program
-    .command('delete-devices [startrange] [endrange]')
+    .command('delete-devices <startrange> <endrange> [idprefix]')
     .option('-p, --pretty', 'Pretty print json')
     .description('create device-deletion object for hub-management')
-    .action((rangeStart, rangeEnd, options) => {
+    .action((rangeStart, rangeEnd, idprefix, options) => {
       const result = bulk.delete({
         rangeStart: Number(rangeStart),
-        rangeEnd: Number(rangeEnd)
+        rangeEnd: Number(rangeEnd),
+        prefix: idprefix
       });
       console.log(options.pretty ? JSON.stringify(result, null, '  ') : JSON.stringify(result))
     })
