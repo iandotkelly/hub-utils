@@ -1,24 +1,29 @@
 {
-  "name": "dev-utils",
-  "version": "0.0.0",
-  "description": "",
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "Requires node.js version 8 or more recent",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "dependencies": {
-    "commander": "^2.11.0"
+    "axios": "^0.18.0",
+    "commander": "^2.19.0",
+    "form-data": "^2.3.3",
+    "numeral": "^2.0.6"
   },
-  "devDependencies": {
-    "eslint": "^4.6.1",
-    "eslint-plugin-node": "^5.1.1"
-  },
-  "engines": {
-    "node": ">=8.0.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ian Kelly",
-  "license": "UNLICENSED"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iandotkelly/hub-utils.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/iandotkelly/hub-utils/issues"
+  },
+  "homepage": "https://github.com/iandotkelly/hub-utils#readme"
 }
